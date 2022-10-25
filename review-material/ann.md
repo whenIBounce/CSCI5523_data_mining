@@ -17,3 +17,4 @@
 3. Characteristics of ANN
    - ANN can easily handle irrelevant attributes, by using zero weights for attributes that do not help in improving the training loss.
    - Redundant attributes receive similar weights and do not degrade the quality of the classifier. However, if the number of irrelevant or redundant attributes is large, the learning of the ANN model may suffer from overfitting, leading to poor generalization performance.
+   - Since the learning of ANN model involves minimizing a** non-convex function**, the solutions obtained by gradient descent are **not** guaranteed to be globally optimal.
