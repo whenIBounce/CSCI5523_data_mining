@@ -1,3 +1,9 @@
+
+# Homework #4
+# Name: Tianhong Zhang
+# UMN Email: zhan4868@umn.edu
+# Student ID: 5293616
+
 ## Question 1. 
 1. (a). What is the range of this measure? When does the measure attain its maximum and minimum values?
 <br>
@@ -52,7 +58,6 @@ It look more similar to IS. This similarity will not always hold, because $s(P)$
 | <{p},{r,t},{t}> | Y                   | N                |
 
 ## Question 5. 
-Assume minconf = 60 %.
 1. a) Write the support count of the following subsequences:
    - (i) s({1,2}) = 1
    - (ii) s({1} {2}) = 3
@@ -93,3 +98,23 @@ with 5 events) found from a sequence data set. Which candidate 6-sequences can b
 four 5-sequences: {3, 4}{2, 3}{1, 2}
 
 ## Question 7. 
+For each of the described data sets, decide what type of clustering should be used (hierarchical or
+partitional, exclusive or overlapping or fuzzy, complete or partial (incomplete)). Briefly explain your
+reasoning if you feel there may be several possible answers.
+
+1. a) Proteins perform different biological functions that are organized into a hierarchical taxonomy (GO) defined by biologists. Some proteins can be multi-functional as well. You want to group them based on those functions. Some proteins may also be missing functional annotation.
+   **hierarchical, overlapping, partial**
+2. b) A nutritionist asks you several questions (e.g., your calorie intake, types of food you eat, your
+physical activity labels, and so on) to assess your risks for diabetes in three different groups: low,
+medium, and high.
+   **partitional, exclusive, complete**. Assume that there is no other class between "low" and "medium"; "medium" and "high", that's how I decide the type of clustering. 
+3. c) The objects are the applicants to a college. Each applicant is assigned a score from 0 to 10, indicating the likelihood/desirability of their admission. Even before any decisions have been made, the admissions personnel view the students as belonging to two groups: those that will be accepted and those that will be rejected.
+   **hierarchical, exlusive, complete**. If the class label is "willBeAccepted" and "willBeRejected", one student cannot belong to both class, and if you see score 0 to 10 as subsets, then there hierarchical relationship between score labels and class labels.
+4. d) Grouping of cities based on the various locations, namely county (local region), state or province, and country.
+   **hierarchical, exclusive, complete**. Assume that no one city can belong to two countries. 
+
+## Question 8.
+1. a) All of the initial centroids are located in one of the circles.
+   The centroids will move, there may be 0 centroids in each circle. To minimize the objective function, all centroids will move towards another cricle. After several iterations, it is possible for all five centroids end up locating between two circles. Assume that A(0,0) and B(4,0), if the centroid is at (0,0), the summed error is 4^2 + 0^2 = 16; if the centroid is at the mean (2,0), the summed error is 2^2 + 2^2 = 8; So in this case, we call not decide how many centroids will end up in each circle eventually. 
+2. b) At least one initial centroid in each circle. In this case, the centroilds will move and at least one centroid in each circle. Five centroids are likely to be distributted in both circles. 
+3. c) If the number of points in the larger circle is far greater than the number of points in the smaller circles, no matter how the initial centroids are located, then it is very likely that all five centroids end up in the larger circle. 
